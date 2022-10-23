@@ -86,7 +86,11 @@ class StoryMenuState extends MusicBeatState
 			);
 		FreeplayState.destroyFreeplayVocals();
 
-		super.create();
+		#if android
+		addVirtualPad(LEFT_FULL, A_B);
+		#end	
+		
+			super.create();
 	}
 
 	override function closeSubState() {
